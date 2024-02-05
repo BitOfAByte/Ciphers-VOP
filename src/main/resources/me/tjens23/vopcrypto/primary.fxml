@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="334.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.tjens23.vopcrypto.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+
+   <Text layoutX="30.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Message" />
+    <TextField fx:id="MsgToEncrypt" layoutX="114.0" layoutY="28.0" prefHeight="25.0" prefWidth="465.0" />
+    <RadioButton fx:id="radioButton1" layoutX="161.0" layoutY="114.0" text="AtbashCipher">
+      <toggleGroup>
+         <ToggleGroup fx:id="toggleGroup" />
+      </toggleGroup></RadioButton>
+    <RadioButton fx:id="radioButton2" layoutX="347.0" layoutY="114.0" prefHeight="16.0" prefWidth="73.0" text="Caesar" toggleGroup="$toggleGroup" />
+   <Button id="btn_encrypt" layoutX="28.0" layoutY="167.0" mnemonicParsing="false" onAction="#onEncryptButtonClick" text="Encrypt" />
+    <TextField fx:id="encrypted_msg" layoutX="114.0" layoutY="167.0" prefHeight="25.0" prefWidth="465.0" />
+   <Button id="btn_decrypt" layoutX="25.0" layoutY="243.0" mnemonicParsing="false" onAction="#onDecryptButtonClick" text="Decrypt" />
+   <TextField fx:id="decrypted_msg" layoutX="108.0" layoutY="243.0" prefHeight="25.0" prefWidth="465.0" />
+    <Spinner fx:id="rotFactor" editable="true" layoutX="448.0" layoutY="110.0" prefHeight="9.0" prefWidth="73.0" />
+</AnchorPane>
